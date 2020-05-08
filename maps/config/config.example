@@ -1,0 +1,22 @@
+<?php
+//Parametros de configuracion
+
+//PARA AUTOLOAD
+//list de directiorios donde  buscar las clases
+$directorios = ['controllers','model','libraries','traits','templates'];
+
+//PARAMETROS DE CONFIGURACION BDD
+define('SGDB','mysql');      //conector que debe usar la BDD
+
+define('DB_HOST','localhost');      //host
+define('DB_USER','root');           //usuario
+define('DB_PASS','');               //password
+define('DB_NAME','venderdetodo');   //base de datos
+define('DB_CHARSET','utf8');       //codificacion
+
+//CONTROLADOR Y METODO POR DEFECTO
+define('DEFAULT_CONTROLLER','Welcome');
+define('DEFAULT_METHOD','index');
+
+//OTROS PARAMETROS
+define('DEBUG',0);      //para depuracion

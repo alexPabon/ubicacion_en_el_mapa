@@ -1,0 +1,21 @@
+#Evita el listado del directorio
+#Options -Indexes
+
+#pone en marcha el mod Rewrite
+RewriteEngine on
+
+#pone en marcha el modo rewrite
+RewriteBase /
+
+#PARA LA APLICACION
+#Controlador
+#Ejemplo: /book --> /index.php?c=book
+RewriteRule ^(index\.php/)?([a-z]+)/?$ /index.php?c=$2 [NC,L]
+
+#Controlador Metodo
+#Ejemplo: /book/list --> /index.php?c=book&m=list
+RewriteRule ^(index\.php/)?([a-z]+)/([a-z]+)/?$ /index.php?c=$2&m=$3 [NC,L]
+
+#Controlador Metodo y parametro
+#Ejemplo: /book/list/2 --> /index.php?c=book&m=show&p=2
+RewriteRule ^(index\.php/)?([a-z]+)/([a-z]+)/([a-z0-9]+)/?$ /index.php?c=$2&m=$3&p=$4 [NC,L]
